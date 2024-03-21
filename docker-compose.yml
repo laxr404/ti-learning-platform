@@ -1,0 +1,14 @@
+version: '3'
+services:
+  website:
+    image: nginx:latest
+    container_name: website
+    build: 
+      context: ./ti_platform/nginx
+    volumes:
+      - ./ti_platform:/usr/share/nginx/html
+    ports:
+      - "127.0.0.1:80:80"
+
+  express:
+    build: ./ti_platform/attacklabs
