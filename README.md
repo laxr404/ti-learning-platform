@@ -10,4 +10,4 @@
 4. Close the platform: `docker compose down`
 
 ## Troubleshooting
-- When there are permission errors upun starting or building the docker compose, try adjusting the rights: `chmod 755 -R ti_platform`
+- When there are permission errors upon starting or building the docker compose, try adjusting the rights: `chmod 755 -R ti_platform`
