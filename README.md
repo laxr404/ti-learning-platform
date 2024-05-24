@@ -12,8 +12,8 @@ a challenge.
 
 This platform was developed as part of my bachelor's thesis and I aim to maintain it for the foreseeable future.
 
-- Access [Public Page]()
-- Access [Public Page Repository]()
+- Access [Public Page](https://laxr404.github.io/ti-learning-platform-public/) for easy perusal.
+- Access [Public Page Repository](https://github.com/laxr404/ti-learning-platform-public/).
 
 ## Features
 - Fundamentals are explained in a simple, easy-to-understand manner with visual help.
