@@ -34,13 +34,14 @@
                     <p>The actual challenges are only accessible when the full platform is hosted on a local virtual machine. This is to ensure a safe and controlled environment for all users, preventing any unauthorized or potentially harmful activities on public networks.</p>
                 </div>
 
-                <h2>Attack Lab: Basic 1</h2>
-                <p>This challenge is designed for beginners, but it's also a great refresher for more experienced users.</p>
+                <h2>Attack Lab: Intermediate 2</h2>
+                <p>This challenge is designed for proficient users, but it's also a great refresher for more experienced users.</p>
                 <p>Using Burp Suite is not necessary for this challenge, but may be of help.</p>
                 <h3>Goal:</h3>
                 <p>Identify the template engine!</p>
-                <div class="lab-list">
-                    <a class="lab" href="attacklabs/lab/lab_b1" id="lab-b1" target="_blank">Enter Lab: Basic 1</a>
+
+                <div class="lab-list-long">
+                    <a class="lab" href="attacklabs/lab2/lab_i2" id="lab-i2" target="_blank">Enter Lab: Intermediate 2</a>
                 </div>
 
                 <h2>Hints</h2>
@@ -50,15 +51,10 @@
                         Hint 1
                     </div>
                     <div class="content">
-                        <p>Take a look at your URL.</p>
-                    </div>
-                    <div class="title">
-                        <i class="dropdown icon"></i>
-                        Hint 2
-                    </div>
-                    <div class="content">
-                        <p>URL's usually encode their special characters. If you are stuck, try this: <a href="https://en.wikipedia.org/wiki/Percent-encoding">https://en.wikipedia.org/wiki/Percent-encoding</a> </p>
-                    </div>
+                        <p>
+                            You are dealing with &#123;&#123; ... &#125;&#125; syntax.
+                        </p>
+                    </div>                 
                 </div>
 
                 <h2>Solution</h2>
@@ -69,12 +65,16 @@
                         Spoiler
                     </div>
                     <div class="content">
-                        <p>Step 1: Paste the Polyglot: <code>&lt;&#37;&#39;&#36;&#123;&#123;/&#35;&#64;&#125;&#125;&#37;&gt;&#123;&#123;</code> in the URL after stockMessage=.</p>
-                        <p>Step 2: An error message will appear that will show you that there is an encoding error.</p>
-                        <p>Step 3: Using <a href="../attacklabs/tutorial.html#polyglot-manipulation">Polyglot Manipulation</a> will identify <code>#{}</code> as the used syntax while <code>#</code> has to be encoded to <code>%23</code>.</p>
-                        <p>Step 3.5: When <code>%23{...</code> or <code>%23{@}</code> is being injected, an error message will appear that will show you that Pug is the template engine that is being used.</p>
-                        <p>Step 5: Use <code>#{7*7}</code> to identify whether Pug Default or Inline is being used </p>
-                        <p>Step 6: Confirm Pug Inline with: <code>#{new Date().getFullYear()}</code></p>
+                        <p>
+                            1. Paste the Polyglot: <code>&lt;&#37;&#39;&#36;&#123;&#123;/&#35;&#64;&#125;&#125;&#37;&gt;&#123;&#123;</code> input box.
+                        </p>
+                        <p>2. Based on  <a href="../attacklabs/tutorial.html#polyglot-manipulation">Polyglot Manipulation</a>, you are dealing with <code>{{…}}</code> syntax.</p>
+                        <p>3. Try <code>&#123;&#123;7*7&#125;&#125;</code> for confirmation.</p>
+                        <p>4. Follow the decision tree.</p>
+                        <p>5. Paste <code>{{ filter upper }} This text will be converted to uppercase.{{ filter upper }}</code> to confirm entering the branch.</p>
+                        <p>6. Continue until you reach: <code>&#123;&#123;config&#125;&#125;.</code> Then inject the payload.</p>
+                        <p>7. If the payload is interpreted, you have now confirmed the template engine is Jinja2.</p>
+
                     </div>
                 </div>
             </div>
@@ -87,6 +87,7 @@
                     <i class="moon outline icon"></i> <!-- Moon icon for dark mode -->
                     <i class="sun icon"></i> <!-- Sun icon for light mode -->
                 </div>
+
             </div>
         </main>
     </div>
@@ -94,5 +95,6 @@
     <script src="../js/navigation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
 </body>
 </html>

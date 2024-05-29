@@ -9,17 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="ui left fixed vertical menu">
-            <div class="item">
-                <img class="ui mini image" src="/images/logo.png">
-            </div>
-            <a class="item" href="/index.html" id="menu-index">Home</a>
-            <a class="item" href="/fundamentals.html" id="menu-theory">Fundamentals</a>
-            <a class="item" href="/dectree.html" id="menu-dectree">Interactive Decision Tree</a>
-            <a class="item" href="/template_engines.html" id="menu-labs">Tested Template Engines</a>
-            <a class="item" href="/labs.html" id="menu-labs">Attack Labs</a>
-        </div>
 
+        <div id="menu"></div>
 
         <main class="center-content">
             <div class="content">
@@ -38,26 +29,10 @@
                 </ul>
                 <p>This platform has been made specifcally to offer a both <strong>interactive</strong> and <strong>visual</strong> learning experience as well provide utility to both beginners and experts.</p>
                 <p>Whether you aim to enhance your professional skills, safeguard your web applications, or simply satisfy your curiosity, this platform is your go-to resource for mastering SSTI. Embrace the challenge, and most importantly: Have fun!</p>
-                
-                <h2>GitHub Repository</h2>
-                <p><a href="https://github.com/laxr404/ti-learning-platform" target="_blank">https://github.com/laxr404/ti-learning-platform</a></p>
-                
-                <h2>Interesting Links</h2>
-                <ul>
-                    <li><a href="https://portswigger.net/web-security/server-side-template-injection">PortSwigger - Server-Side Template Injection Overview</a></li>
-                    <li><a href="https://portswigger.net/research/server-side-template-injection">PortSwigger Research - Server-Side Template Injection</a></li>
-                    <li><a href="https://portswigger.net/web-security/all-labs#server-side-template-injection">PortSwigger Labs - Server-Side Template Injection</a></li>
-                    <li><a href="https://portswigger.net/web-security/server-side-template-injection/exploiting">PortSwigger - Exploiting Server-Side Template Injection</a></li>
-                    <li><a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection">HackTricks - SSTI Server-Side Template Injection</a></li>
-                    <li><a href="https://github.com/payloadbox/ssti-payloads">GitHub - SSTI Payloads</a></li>
-                    <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md?ref=hackernoon.com">GitHub - PayloadsAllTheThings: SSTI</a></li>
-                    <li><a href="https://github.com/Hackmanit/template-injection-playground">GitHub - Template Injection Playground by m10x</a></li>
-                    <li><a href="https://github.com/Hackmanit/template-injection-table">GitHub - Template Injection Table by m10x</a></li>
-                </ul>
-
 
 
             </div>
+            <div class="ui divider"></div>
             <div class="button-container">
                 <!-- With a new element using Semantic UI icons -->
                 <div id="toggle-mode" class="ui icon button">
@@ -66,8 +41,10 @@
                 </div>
             </div>
         </main>
+
     </div>
     <script type="module" src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>-->
 

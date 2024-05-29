@@ -41,7 +41,6 @@ function toggleButtonIcon() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const toggleModeButton = document.getElementById('toggle-mode');
 
@@ -91,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to limit node text length
     limitNodeTextLength();
 
+    // Initialize Semantic UI components
     $(document).ready(function () {
         $('table').tablesort();
     });
@@ -99,4 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.ui.accordion').accordion();
     });
 
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown({
+            on: 'hover',
+            direction: 'auto',
+            context: 'main'
+        });
+    });
+
+
 });
+

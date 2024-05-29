@@ -19,16 +19,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="ui left fixed vertical menu">
-            <div class="item">
-                <img class="ui mini image" src="/images/logo.png">
-            </div>
-            <a class="item" href="/index.html" id="menu-index">Home</a>
-            <a class="item" href="/fundamentals.html" id="menu-theory">Fundamentals</a>
-            <a class="item" href="/dectree.html" id="menu-dectree">Interactive Decision Tree</a>
-            <a class="item" href="/template_engines.html" id="menu-labs">Tested Template Engines</a>
-            <a class="item" href="/labs.html" id="menu-labs">Attack Labs</a>
-        </div>
+        <div id="menu"></div>
 
 
 
@@ -158,11 +149,11 @@
                     <li><a href="https://portswigger.net/web-security/server-side-template-injection#how-to-prevent-server-side-template-injection-vulnerabilities" target="_blank">PortSwigger: Preventing Server-Side Template Injection Vulnerabilities</a></li>
                     <li><a href="https://www.digitalinformationworld.com/2023/04/exploring-ssti-vulnerabilities-real.html" target="_blank">Digital Information World: Exploring SSTI Vulnerabilities</a></li>
                     <li><a href="https://www.wallarm.com/what/server-side-template-injection-ssti-vulnerability" target="_blank">Wallarm: Server-Side Template Injection (SSTI) Vulnerability</a></li>
-                    <li><a href="https://startup-house.com/inventory/template-engine" target="_blank">Startup House: Template Engines</a></li>
                 </ul>
 
 
             </div>
+            <div class="ui divider"></div>
             <div class="button-container">
                 <!-- With a new element using Semantic UI icons -->
                 <div id="toggle-mode" class="ui icon button">
@@ -173,6 +164,7 @@
         </main>
     </div>
     <script type="module" src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>-->
 </body>

@@ -74,10 +74,8 @@ body.dark-mode {
     left: 0;
     height: 100%;
     transform: translateY(0);
-    z-index: 1;
-    overflow-y: auto;
+    z-index: 1000; 
 }
-
 
     .ui.left.fixed.vertical.menu ul {
         list-style: none;
@@ -107,6 +105,94 @@ body.dark-mode {
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
+    /* Ensure the dropdown menus can overflow and appear above other content */
+    .ui.left.fixed.vertical.menu .menu {
+        position: absolute; 
+        top: 0; 
+        z-index: 1001; 
+        width: 100%; 
+    }
+
+    .ui.left.fixed.vertical.menu .dropdown.item .menu {
+        top: 0; 
+        left: 100%; 
+        margin-top: 0; 
+    }
+
+    .ui.left.fixed.vertical.menu .dropdown.item:hover .menu {
+        display: block; 
+    }
+
+    .ui.left.fixed.vertical.menu .dropdown.item .menu .item {
+        white-space: nowrap; 
+        padding: 10px 20px; 
+    }
+
+.ui.divider {
+   
+}
+
+
+/* Dropdown item styles */
+.ui.dropdown.item {
+    position: relative;
+    cursor: pointer;
+    /*background-color: #555555;*/
+    color: #F2F3F4 !important;
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px !important;
+    width: 100%;
+    
+    
+}
+    .ui.dropdown.item:hover {
+        
+    }
+
+body.dark-mode .ui.dropdown.item {
+    /*background-color: #3c3c3c;*/
+    color: #d5d8db !important;
+}
+
+
+.ui.dropdown.item .menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 370px !important;
+    background-color: #555555;
+    color: #F2F3F4;
+    box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    font-size: 14px;
+    
+}
+
+.ui.dropdown.item:hover .menu {
+    display: block; /* Show on hover */
+}
+
+    .ui.dropdown.item .menu .item {
+        white-space: nowrap;
+        padding: 10px 20px;
+        color: #F2F3F4;
+    }
+
+/* Dropdown icon styles */
+.dropdown.icon {
+    float: right;
+    margin-left: 10px;
+}
+
+body.dark-mode .ui.dropdown.icon{
+    background-color: #3c3c3c;
+    color: #d5d8db;
+}
+
+
+
 
 
 
@@ -117,6 +203,8 @@ body.dark-mode {
     /*justify-content: left; */
     padding-left: 340px;
     box-sizing: border-box;
+    position: relative; /* Ensure it is positioned relative to the menu */
+    z-index: 1; /* Lower z-index to keep it behind the dropdown */
 }
 
 
@@ -165,7 +253,7 @@ body.dark-mode {
 
 
 .button-container {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
 }
@@ -491,6 +579,7 @@ body.dark-mode .legend li {
 
 .shortlist li {
     color: #333;
+    font-size: 16px;
     /*background-color: #515c64; */
     /*border-radius: 5px;*/
     padding: 2px 16px;
@@ -500,10 +589,33 @@ body.dark-mode .legend li {
 
 body.dark-mode .shortlist li {
     color: #e9ecef;
+    font-size: 16px;
     /*background-color: #343a40; */
     /*border-radius: 5px; */
     padding: 2px 16px;
     margin-bottom: 4px;
+    list-style: inside square;
+}
+
+.longlist li {
+    color: #333;
+    font-size: 16px;
+    /*background-color: #343a40; */
+    /*border-radius: 5px; */
+    max-width: 160px;
+    padding: 2px 8px;
+    margin-bottom: 0px;
+    list-style: inside square;
+}
+
+body.dark-mode .longlist li {
+    color: #e9ecef;
+    font-size: 16px;
+    /*background-color: #343a40; */
+    /*border-radius: 5px; */
+    max-width: 160px;
+    padding: 2px 8px;
+    margin-bottom: 0px;
     list-style: inside square;
 }
 
@@ -543,4 +655,12 @@ body.dark-mode .warning {
 
 .white {
     /*color: #ffffff;  */
+}
+
+.logo {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    width: 150px !important;
 }

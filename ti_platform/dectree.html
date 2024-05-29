@@ -10,16 +10,7 @@
 <body>
 
     <div class="container">
-        <div class="ui left fixed vertical menu">
-            <div class="item">
-                <img class="ui mini image" src="/images/logo.png">
-            </div>
-            <a class="item" href="/index.html" id="menu-index">Home</a>
-            <a class="item" href="/fundamentals.html" id="menu-theory">Fundamentals</a>
-            <a class="item" href="/dectree.html" id="menu-dectree">Interactive Decision Tree</a>
-            <a class="item" href="/template_engines.html" id="menu-labs">Tested Template Engines</a>
-            <a class="item" href="/labs.html" id="menu-labs">Attack Labs</a>
-        </div>
+        <div id="menu"></div>
 
 
         <main class="center-content">
@@ -45,17 +36,6 @@
                     <li><strong>[red or green dot]</strong> - Leaf Node: Indicates an identified template engine or the end of that path.</li>
                 </ul>
 
-                <h3>List of Polyglots:</h3>
-                <p>This is a list of polyglots most likely to be useful for testing.</p>
-                <ul class="shortlist">
-                    <li><code>&#36;&#123;&lt;&#37;&#91;&#37;&#39;&#34;&#125;&#125;&#37;\ </code></li>
-                    <li><code>&#36;&#123;&#123;&lt;&#37;&#91;&#37;&#39;&#34;&#125;&#125;&#37;\&#46; </code></li>
-                    <li><code>&lt;&#35;set(&#36;x&lt;&#37;=&#123;&#123;=&#123;&#64;&#123;&#35;&#123;&#36;&#123;xux&#125;&#125;&#37;&#41; </code></li>
-                    <li><code>&lt;&#37;=&#123;&#123;=&#123;&#64;&#123;&#35;&#123;&#36;&#123;xu&#125;&#125;&#37;&gt; </code></li>
-                    <li><code>&lt;th:t=&quot;&#36;&#123;xu&#125;&#35;foreach. </code></li>
-                    <li><code>&lt;&#37;&#39;&#36;&#123;&#123;&#35;&#64;&#125;&#125;&#37;&gt; </code></li>
-                    <li><code>&lt;&#37;&#39;&#36;&#123;&#123;/&#35;&#64;&#125;&#125;&#37;&gt;&#123;&#123; </code></li>
-                </ul>
 
 
                 <p>This tool is designed to be a hands-on guide for both beginners and experienced users. Just click through the nodes and uncover the insights you need!</p>
@@ -70,6 +50,7 @@
 
 
 
+            <div class="ui divider"></div>
 
             <div class="button-container">
                 <!-- With a new element using Semantic UI icons -->
@@ -91,15 +72,9 @@
     </script>
 
     <script type="module" src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script src="js/tablesort.js"></script> 
-    <script>
-        $(document).ready(function () {
-            $('table').tablesort();
-        });
-    </script>
-
 
 </body>
 </html>

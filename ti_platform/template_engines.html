@@ -10,16 +10,7 @@
 <body>
 
     <div class="container">
-        <div class="ui left fixed vertical menu">
-            <div class="item">
-                <img class="ui mini image" src="/images/logo.png">
-            </div>
-            <a class="item" href="/index.html" id="menu-index">Home</a>
-            <a class="item" href="/fundamentals.html" id="menu-theory">Fundamentals</a>
-            <a class="item" href="/dectree.html" id="menu-dectree">Interactive Decision Tree</a>
-            <a class="item" href="/template_engines.html" id="menu-labs">Tested Template Engines</a>
-            <a class="item" href="/labs.html" id="menu-labs">Attack Labs</a>
-        </div>
+        <div id="menu"></div>
 
 
         <main class="center-content">
@@ -27,22 +18,24 @@
             <div class="content">
 
 
-                <h1>Tested Template Engines</h1>
+                <h1>Consolidated Data</h1>
                 <p>Welcome to our extensive resource, where we've meticulously compiled a comprehensive table of various template engines that we've tested. This table serves as an invaluable tool for developers, security professionals, and researchers who are exploring the capabilities, vulnerabilities, and unique characteristics of different template engines used in web applications.</p>
 
-                <h2>Features of the Table:</h2>
+                <h2>Features:</h2>
                 <ul class="decision-tree-explanation">
-                    <li><strong>Detailed Information:</strong> Each entry in the table provides essential details about the template engine, including its name, version, known vulnerabilities, and special features.</li>
+                    <li><strong>Detailed Information:</strong> Each entry in the tables provides essential details about the template engine, including its name, version, known vulnerabilities, and special features.</li>
                     <li><strong>Ease of Comparison:</strong> Organized for your convenience, the table allows you to easily compare different template engines to determine which best fits your specific requirements or to understand their security implications.</li>
-                    <li><strong>Regular Updates:</strong> The world of web development is ever-evolving. We continuously update this table to reflect the latest findings and developments in this research.</li>
                 </ul>
 
                 <h3>Legend:</h3>
-                <ul class="legend">
-                    <li><strong>IDP:</strong> Identifying Payload - Payload that is used to identify a certain template engine or group of template engines. </li>
-                    <li><strong>Final IDP:</strong> Final Identifying Payload - The final payload that is used to identify a specific template engine. </li>
-                    <li><strong>Basic Syntax:</strong> The syntax that is default to specific template engines. </li>
-                </ul>
+                <div class="content">
+                    <ul class="legend">
+                        <li><strong>IDP:</strong> Identifying Payload - Payload that is used to identify a certain template engine or group of template engines. </li>
+                        <li><strong>Final IDP:</strong> Final Identifying Payload - The final payload that is used to identify a specific template engine. </li>
+                        <li><strong>Basic Syntax:</strong> The syntax that is default to specific template engines. </li>
+                    </ul>
+                </div>
+
 
                 <div class="warning">
                     <p><strong>Important Notice:</strong></p>
@@ -627,7 +620,7 @@
                     </tbody>
                 </table>
 
-                <h2>Tables Divided Into Groups</h2>
+                <h2 id="tables-divided-by-groups">Tables Divided By Groups</h2>
                 <h3>GroupPink</h3>
 
                 <table class="ui sortable celled table">
@@ -1037,7 +1030,47 @@
                 </table>
             </div>
 
+            <h2 id="list-of-polyglots">List of Polyglots</h2>
+            <p>This is a list of polyglots most likely to be useful for testing.</p>
+            <ul class="shortlist">
+                <li><code>&#36;&#123;&lt;&#37;&#91;&#37;&#39;&#34;&#125;&#125;&#37;\ </code></li>
+                <li><code>&#36;&#123;&#123;&lt;&#37;&#91;&#37;&#39;&#34;&#125;&#125;&#37;\&#46; </code></li>
+                <li><code>&lt;&#35;set(&#36;x&lt;&#37;=&#123;&#123;=&#123;&#64;&#123;&#35;&#123;&#36;&#123;xux&#125;&#125;&#37;&#41; </code></li>
+                <li><code>&lt;&#37;=&#123;&#123;=&#123;&#64;&#123;&#35;&#123;&#36;&#123;xu&#125;&#125;&#37;&gt; </code></li>
+                <li><code>&lt;th:t=&quot;&#36;&#123;xu&#125;&#35;foreach. </code></li>
+                <li><code>&lt;&#37;&#39;&#36;&#123;&#123;&#35;&#64;&#125;&#125;&#37;&gt; </code></li>
+                <li><code>&lt;&#37;&#39;&#36;&#123;&#123;/&#35;&#64;&#125;&#125;&#37;&gt;&#123;&#123; </code></li>
+            </ul>
 
+            <h2 id="list-of-basic-syntax">List of Basic Syntax</h2>
+            <p>This is a list of basic syntax most likely to be useful for testing.</p>
+            <ul class="longlist">
+                <li><code>#{ }</code></li>
+                <li><code>= </code></li>
+                <li><code>{$ }</code></li>
+                <li><code>{${}}</code></li>
+                <li><code>$( )</code></li>
+                <li><code>$[ ]</code></li>
+                <li><code>${ }</code></li>
+                <li><code>[= ]</code></li>
+                <li><code>$!{ }</code></li>
+                <li><code>&lt;%= %&gt;</code></li>
+                <li><code>&lt;%- %&gt;</code></li>
+                <li><code>&lt;%% %&gt;</code></li>
+                <li><code>&lt;%= -%&gt;</code></li>
+                <li><code>&lt;%~  &gt;</code></li>
+                <li><code>%= %</code></li>
+                <li><code>{{ }}</code></li>
+                <li><code>@php  @endphp</code></li>
+                <li><code>{{: }}</code></li>
+                <li><code>&lt;?= ?&gt;</code></li>
+                <li><code>@</code></li>
+                <li><code>@()</code></li>
+                <li><code>{ }</code></li>
+                <li><code>$</code></li>
+            </ul>
+
+            <div class="ui divider"></div>
 
             <div class="button-container">
                 <!-- With a new element using Semantic UI icons -->
@@ -1047,26 +1080,17 @@
                 </div>
             </div>
         </main>
+
     </div>
 
-    <script type="module">
-        //import { applyDarkModePreference, toggleDarkMode } from './js/main.js';
-        import { createTree } from './js/tree.js';
 
-        window.onload = function () {
-            createTree();
-        };
-    </script>
 
     <script type="module" src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <script src="js/tablesort.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('table').tablesort();
-        });
-    </script>
+
 
 
 </body>

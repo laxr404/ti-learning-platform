@@ -1,6 +1,6 @@
 {
   "name": "<%'${{/#{@}}%>{{",
-  "info": "Polyglot Root Node",
+  "info": "Polyglot Root Node: The decision tree starts with the root node, which in this case is a polyglot used to detect a vulnerability in the first place. There are various polyglots than can be used. The one in this node has been proven to be the most effective one.",
   "children": [
     {
       "name": "END",
